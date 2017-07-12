@@ -1,0 +1,34 @@
+#fb{
+	text-decoration:underline;
+	padding:5px;
+}
+
+.contact h1{
+	text-align:center;
+	padding:10px;
+	
+}
+.contact div{
+	
+	background-color:#8B8B8F;
+	border-bottom-right-radius:30px;
+	border-bottom-left-radius:30px;
+	height:220px;
+	width:1200px;
+
+}
+button{
+	width:100px;
+	height:40px;
+	font-size:15px;
+	background-color:grey;
+	border:none;
+	box-shadow:0 0 5px white;	
+}
+button a{
+	text-decoration:none;
+	color:black;
+
+}
+
+

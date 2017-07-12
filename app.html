@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+<link rel='stylesheet' href='app.css'>
+<script language="JavaScript">
+
+function validateForm()
+{
+		var x = document.forms["myform"]["u"].value;
+		var y = document.forms["myform"]["p"].value;
+		if( x != y)
+		{
+			alert("Invalid Username or Password");
+			//document.getElementById('f1').innerText = "Invalid Username or Password"; 
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+		
+	
+}
+</script>  
+     
+	 
+</head>
+
+<body>
+
+<center>
+<h1 id="head">Login</h1>
+</center>    
+
+  <div class="login">
+	<form name = "myform" method="post" action = 'index.html' onsubmit="return validateForm()" >
+    	<input id = 'u' type="text" name="u" placeholder="Username" required="required" />
+        <input id = 'p' type="password" name="p" placeholder="Password" required="required" />
+		
+        <button type = 'submit' class="btn btn-primary btn-block btn-large" >Let me in.</button>
+		
+    </form>
+</div>
+  
+
+</body>
+</html>

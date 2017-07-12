@@ -1,0 +1,131 @@
+<!DOCTYPE/>
+<html>
+<meta lang="en"/>
+<head>
+<title>Gallery | Sahotta's Photography</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="gallery.css"/>
+<link rel="stylesheet" href="main.css"/>
+
+<script type="text/javascript">
+var image;
+var timer;
+var check;
+var n=1;
+check=0;
+function slideshow(){
+n++;
+if(n==6){
+n=2;
+}
+image = document.getElementById('x');
+
+switch(n){
+case 2:
+image.src="images/2.jpg";
+break;
+
+case 3:
+image.src="images/3.jpg";
+break;
+
+case 4:
+image.src="images/4.jpg";
+break;
+
+case 5:
+image.src="images/5.jpg";
+break;
+default:
+n=1;
+break;
+}
+}
+
+function run(){
+timer=setInterval('slideshow();',1000);
+}
+
+function pr(){
+if(check==1){
+check--;
+//alert("Resumed");
+run();
+}
+else if(check==0){
+check++;
+//alert("Paused");
+clearInterval(timer);
+}
+}
+
+run();
+</script>
+</head>
+
+<body>
+
+<div class="main">
+
+<header class="tagline">
+<img id="logo" src="images/new.jpg" alt="tag"/>
+
+<nav>
+<article class="menu">
+<div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a id="hil" href="gallery.html">Gallery</a></li>
+<!-- <li><a href="contact.html">Contact</a></li> -->
+
+<li id="about"><a href="app.html" >Logout</a></li>
+<li></li>
+</ul>
+</div>
+</article>
+</nav>
+
+</header>
+<!--
+<section>
+<article class="picsinfo">
+<center>
+<h1>Saleran Dam (Chohal,Hsp)</h1>
+<img src="images/1.jpg" alt="1" height="600px" width="900px"/>
+<h1>Saleran Dam (Chohal,Hsp)</h1>
+<img src="images/2.jpg" alt="2" height="600px" width="900px"/>
+<h1>Rohtang (Himachal Pardesh)</h1>
+<img src="images/3.jpg" alt="3" height="600px" width="900px"/>
+<h1>A rose at my sweet home</h1>
+<img src="images/4.jpg" alt="4" height="600px" width="900px"/>
+<h1>Sundar Nagar (Himachal Pardesh)</h1>
+<img src="images/5.jpg" alt="5" height="600px" width="900px"/>
+<h1 id="exp">At my sweet home</h1>
+<img src="images/6.jpg" alt="6" height="700px" width="600px"/>
+</center>
+</article>
+</section>
+-->
+<section>
+<article>
+<center>
+<img src="images/1.jpg" height="500px" width="800px" id="x" onclick="pr();"/>
+
+<center>
+<img id="pbutton" src="images/button.png" alt="button" height="40px" width="40px" onclick="pr();"/>
+</center>
+
+
+</center>
+</article>
+</section>
+
+</div>
+
+<footer class="footer">
+<!-- <center><h1>&copy Developed By - Gurdeep Sahotta - All Right Resereved - 2016</h1></center>
+ -->
+</footer>
+
+</body>
+</html>
